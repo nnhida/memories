@@ -25,7 +25,7 @@ function Closing() {
 
         {/* Main content */}
         <div className="z-20 w-[90%] max-w-[400px]">
-          <p className="text-white text-center text-xl font-semibold px-4 drop-shadow-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, delectus? Ut delectus voluptatibus consequatur ex.</p>
+          <p className="text-white text-center text-xl font-semibold px-4 drop-shadow-lg">lets walk together until 2025 end, shall we?</p>
 
           {/* Button */}
           <div className="flex justify-center w-full mt-12">

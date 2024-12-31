@@ -1,21 +1,30 @@
 import React from 'react';
 import { useState, useRef } from 'react';
-import { Search, Mic, Camera, ArrowLeft, X, Clock } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { Search, Mic, Camera, ArrowLeft, X, Clock } from 'lucide-react';
 import { Google } from './icons';
 
 function Question() {
   const [searchQuery, setSearchQuery] = useState('');
   const [isInputFocused, setIsInputFocused] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
   const inputRef = useRef(null);
+
+  const validSearchTerms = ['how long have we been together?', 'how long have we been together', 'our anniversary date', 'when did we start dating'];
 
   const trends = ['Who is the prettiest girl in the world?', 'Why does Michella so amazing?', `Biw's birthdate (coz Ella forgets)`];
 
   const handleSearch = (e) => {
     e.preventDefault();
-    if (searchQuery.toLowerCase() === 'how long have we been together?' || 'how long have we been together') {
+    const query = searchQuery.toLowerCase().trim();
+
+    if (validSearchTerms.includes(query)) {
+      setErrorMessage('');
       navigate('/timer');
+    } else {
+      setErrorMessage('Page not Found! Tips: Read pro tip under the search box');
+      setTimeout(() => setErrorMessage(''), 4000);
     }
   };
   return (
@@ -100,8 +109,9 @@ function Question() {
               <Camera className="w-5 h-5 text-[#8ab4f8]" />
             </div>
           </form>
-          <div className="mt-10  px-5 text-white/50">
+          <div className="mt-10 px-5 text-white/50">
             <p>Pro tip: try searching "How long have we been together?" ;)</p>
+            {errorMessage && <div className="mt-4 text-sm font-bold text-red-500">{errorMessage}</div>}
           </div>
         </div>
       )}

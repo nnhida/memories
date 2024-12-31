@@ -3,53 +3,38 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowLeft } from './icons';
 import Carousel from './Carousel';
 import { ImageCard } from './ImageCard';
-import { brandy, bruno, greenday, kanye, souljaboy, sparks, sunsetz } from '../assets';
+import { ella1, ella2, ella3, ella4 } from '../assets';
 
 function Prettiest() {
   const navigate = useNavigate();
 
   const prettiestContent = [
     {
-      Image: brandy,
-      title: 'Brandy',
-      description: 'The timeless beauty',
+      Image: ella1,
+      title: 'Ella 1',
+      description: 'Beautiful moment',
     },
     {
-      Image: bruno,
-      title: 'Bruno',
-      description: 'The charming one',
+      Image: ella2,
+      title: 'Ella 2',
+      description: 'Stunning view',
     },
     {
-      Image: greenday,
-      title: 'Green Day',
-      description: 'The energetic spirit',
+      Image: ella3,
+      title: 'Ella 3',
+      description: 'Lovely smile',
     },
     {
-      Image: kanye,
-      title: 'Kanye',
-      description: 'The creative genius',
-    },
-    {
-      Image: souljaboy,
-      title: 'Soulja Boy',
-      description: 'The trendsetter',
-    },
-    {
-      Image: sparks,
-      title: 'Sparks',
-      description: 'The shining star',
-    },
-    {
-      Image: sunsetz,
-      title: 'Sunsetz',
-      description: 'The golden hour',
+      Image: ella4,
+      title: 'Ella 4',
+      description: 'Charming pose',
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-200 to-purple-300 flex flex-col items-center justify-center p-4">
+    <div className="min-h-screen bg-black/20 flex flex-col items-center justify-center p-4">
       <div className="w-[90%] max-w-[400px] animate-fade-in">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-center bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Who is the prettiest?</h1>
+        <h1 className="text-xl sm:text-xl font-bold mb-6 text-center text-white drop-shadow-lg">Mirror, mirror... Who's the prettiest girl in the world?</h1>
 
         <Carousel>
           {prettiestContent.map(({ Image, title, description }, index) => (
@@ -65,10 +50,10 @@ function Prettiest() {
 
         <div className="flex justify-center w-full mt-12">
           <button
-            className="px-6 py-3 flex justify-center items-center bg-white/30 gap-2 hover:bg-white/40 backdrop-blur-sm text-purple-900 font-medium border border-white/50 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
+            className="px-6 py-3 flex justify-center items-center bg-white/20 gap-2 hover:bg-white/30 backdrop-blur-sm text-white text-sm border border-white/50 rounded-lg"
             onClick={() => navigate('/question')}
           >
-            <ArrowLeft className="w-5 h-5 text-purple-900" /> Back
+            <ArrowLeft className="w-5 h-5" /> Back
           </button>
         </div>
       </div>

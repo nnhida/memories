@@ -1,18 +1,14 @@
 import React from 'react';
 
-export const ImageCard = ({ imageUrl, altText = 'image', title, description }) => {
+export const ImageCard = ({ imageUrl, altText = 'image' }) => {
   return (
     <div className="max-w-sm mx-auto overflow-hidden shadow-lg bg-white rounded-lg">
-      <div className="relative w-full aspect-square">
+      <div className="relative w-full h-64 overflow-hidden">
         <img
           src={imageUrl}
           alt={altText}
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover"
         />
-      </div>
-      <div className="p-2">
-        <h2 className="mb-2 text-xl font-bold text-gray-800">{title}</h2>
-        <p className="text-gray-700">{description}</p>
       </div>
     </div>
   );

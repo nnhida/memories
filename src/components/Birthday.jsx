@@ -18,7 +18,14 @@ function Birthday() {
       const now = new Date();
       const years = differenceInYears(now, BIRTHDATE);
       const months = differenceInMonths(now, BIRTHDATE) % 12;
-      const days = differenceInDays(now, new Date(now.getFullYear(), now.getMonth(), BIRTHDATE.getDate()));
+      // Calculate days since last birthdate in current month
+      const lastBirthdateThisMonth = new Date(now.getFullYear(), now.getMonth(), BIRTHDATE.getDate());
+      let days = differenceInDays(now, lastBirthdateThisMonth);
+
+      // If days is negative, calculate days since last month's birthdate
+      if (days < 0) {
+        days = differenceInDays(now, new Date(now.getFullYear(), now.getMonth() - 1, BIRTHDATE.getDate()));
+      }
 
       setAge({ years, months, days });
     };

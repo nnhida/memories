@@ -10,7 +10,7 @@ function Question() {
   const navigate = useNavigate();
   const inputRef = useRef(null);
 
-  const trends = ['Who is the prettiest girl in the world?', 'Why does Michella so beautiful?', `Biw's birthdate (coz Ella forgets)`];
+  const trends = ['Who is the prettiest girl in the world?', 'Why does Michella so amazing?', `Biw's birthdate (coz Ella forgets)`];
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -51,15 +51,27 @@ function Question() {
               </button>
             </div>
             <div className="space-y-4">
-              {trends.map((trend) => (
-                <div
-                  key={trend}
-                  className="flex items-center gap-3 py-2"
-                >
-                  <Search className="w-5 h-5 text-[#9aa0a6]" />
-                  <span>{trend}</span>
-                </div>
-              ))}
+              {trends.map((trend) => {
+                let path = '/';
+                if (trend.includes('prettiest girl')) {
+                  path = '/Prettiest';
+                } else if (trend.includes('Michella')) {
+                  path = '/Amazing';
+                } else if (trend.includes('Biw')) {
+                  path = '/Birthday';
+                }
+
+                return (
+                  <div
+                    key={trend}
+                    className="flex items-center gap-3 py-2 cursor-pointer hover:bg-[#303134] rounded-lg px-2"
+                    onClick={() => navigate(path)}
+                  >
+                    <Search className="w-5 h-5 text-[#9aa0a6]" />
+                    <span>{trend}</span>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

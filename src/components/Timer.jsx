@@ -2,11 +2,10 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { differenceInDays, differenceInHours, differenceInMinutes, differenceInSeconds } from 'date-fns';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight } from './icons';
+import { ArrowRight, ArrowLeft } from './icons';
 
 function Timer() {
-  // Anniversary date
-  const START_DATE = new Date('2023-10-11');
+  const START_DATE = new Date('2023-10-11T22:43:00');
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -58,13 +57,19 @@ function Timer() {
           </div>
         </div>
         <p className=" text-lg mb-8 drop-shadow-lg">{`... and still counting <3`}</p>
-        {/* Button */}
-        <div className="flex justify-center w-full">
+        {/* Buttons */}
+        <div className="flex flex-col items-center gap-4 w-full">
           <button
             className="mt-8 sm:mt-12 px-6 py-2 flex justify-center items-center bg-white/20 gap-2 hover:bg-white/30 backdrop-blur-sm text-white text-sm sm:text-base border border-white/50 rounded-lg"
             onClick={() => navigate('/recap')}
           >
             Go to next page <ArrowRight />
+          </button>
+          <button
+            className="px-6 py-2 flex justify-center items-center bg-white/20 gap-2 hover:bg-white/30 backdrop-blur-sm text-white text-sm sm:text-base border border-white/50 rounded-lg"
+            onClick={() => navigate('/question')}
+          >
+            <ArrowLeft /> Back to last page
           </button>
         </div>
       </div>

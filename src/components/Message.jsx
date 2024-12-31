@@ -1,5 +1,5 @@
 import React from 'react';
-import { picture } from '../assets';
+// import { picture, chat, chat1 } from '../assets';
 import Carousel from './Carousel';
 import { ImageCard } from './ImageCard';
 import { ArrowLeft } from './icons';
@@ -10,8 +10,8 @@ function Message() {
 
   // customize your own picture, title and subtext. You can also add more picture.
   const pictures = [
-    { Image: picture, title: 'September 3, 2024', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, possimus!' },
-    { Image: picture, title: 'September 3, 2024', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, possimus!' },
+    { Image: chat, title: 'Chat Image 1', description: 'This is the first chat image' },
+    { Image: chat1, title: 'Chat Image 2', description: 'This is the second chat image' },
   ];
   return (
     <div className="min-h-screen bg-black/20 flex flex-col items-center justify-center">

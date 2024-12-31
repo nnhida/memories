@@ -8,16 +8,8 @@ import Music from './Music';
 import Picture from './Picture';
 import Message from './Message';
 import Carousel from './Carousel';
+import Amazing from './Amazing';
+import Birthday from './Birthday';
+import Prettiest from './Prettiest';
 
-export {
-  Passcode,
-  Question,
-  Timer,
-  Recap,
-  Letter,
-  Closing,
-  Picture,
-  Music,
-  Carousel,
-  Message
-}
+export { Passcode, Question, Timer, Recap, Letter, Closing, Picture, Music, Carousel, Message, Amazing, Birthday, Prettiest };

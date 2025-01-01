@@ -4,58 +4,56 @@ import { Closing, Letter, Passcode, Question, Recap, Timer, Message, Picture, Pr
 import './index.css';
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={<Passcode />}
-        />
-        <Route
-          path="/question"
-          element={<Question />}
-        />
-        <Route
-          path="/timer"
-          element={<Timer />}
-        />
-        <Route
-          path="/Prettiest"
-          element={<Prettiest />}
-        />
-        <Route
-          path="/Amazing"
-          element={<Amazing />}
-        />
-        <Route
-          path="/Birthday"
-          element={<Birthday />}
-        />
-        <Route
-          path="/recap"
-          element={<Recap />}
-        />
-        {/* <Route
+    <Routes>
+      <Route
+        path="/"
+        element={<Passcode />}
+      />
+      <Route
+        path="/question"
+        element={<Question />}
+      />
+      <Route
+        path="/timer"
+        element={<Timer />}
+      />
+      <Route
+        path="/Prettiest"
+        element={<Prettiest />}
+      />
+      <Route
+        path="/Amazing"
+        element={<Amazing />}
+      />
+      <Route
+        path="/Birthday"
+        element={<Birthday />}
+      />
+      <Route
+        path="/recap"
+        element={<Recap />}
+      />
+      {/* <Route
           path="/recap/message"
           element={<Message />}
         /> */}
-        {/* <Route
+      {/* <Route
           path="/recap/music"
           element={<Music />}
         /> */}
-        <Route
-          path="/recap/pictures"
-          element={<Picture />}
-        />
-        <Route
-          path="/letter"
-          element={<Letter />}
-        />
-        <Route
-          path="/closing"
-          element={<Closing />}
-        />
-      </Routes>
-    </Router>
+      <Route
+        path="/recap/pictures"
+        element={<Picture />}
+      />
+      <Route
+        path="/letter"
+        element={<Letter />}
+      />
+      <Route
+        path="/closing"
+        element={<Closing />}
+      />
+    </Routes>
   );
 }
 

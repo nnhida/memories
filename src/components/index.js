@@ -11,5 +11,6 @@ import Carousel from './Carousel';
 import Amazing from './Amazing';
 import Birthday from './Birthday';
 import Prettiest from './Prettiest';
+import Bingo from './Bingo';
 
-export { Passcode, Question, Timer, Recap, Letter, Closing, Picture, Carousel, Message, Amazing, Birthday, Prettiest };
+export { Passcode, Question, Timer, Recap, Letter, Closing, Picture, Carousel, Message, Amazing, Birthday, Prettiest, Bingo };

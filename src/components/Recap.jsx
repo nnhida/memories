@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ArrowLeft, Message, Image, Music, Heart } from './icons';
+import { ArrowRight, ArrowLeft, Image, Heart } from './icons';
 import { useNavigate } from 'react-router-dom';
 import '../index.css';
 function Recap() {
@@ -12,7 +12,7 @@ function Recap() {
 
         <div className="flex flex-wrap justify-center gap-10 mb-12">
           {[
-            // { Icon: Message, label: 'Messages', path: '/recap/message' },
+            // { Icon: Message, label: 'Bingo', path: '/recap/Bingo' },
             { Icon: Image, label: 'Pictures', path: '/recap/pictures' },
             // { Icon: Music, label: 'Music', path: '/recap/music' },
           ].map(({ Icon, label, path }) => (

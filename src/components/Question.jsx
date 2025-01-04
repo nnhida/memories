@@ -11,7 +11,7 @@ function Question() {
   const navigate = useNavigate();
   const inputRef = useRef(null);
 
-  const validSearchTerms = ['how long have we been together?', 'how long have we been together', 'our anniversary date', 'when did we start dating'];
+  const validSearchTerms = ['how long have we been together?', 'how long have we been together', 'our anniversary date', 'when did we start dating', 'bingo play', 'play bingo', 'bingo', 'play'];
 
   const trends = ['Who is the prettiest girl in the world?', 'Why does Michella so amazing?', `Biw's birthdate (coz Ella forgets)`];
 
@@ -19,7 +19,10 @@ function Question() {
     e.preventDefault();
     const query = searchQuery.toLowerCase().trim();
 
-    if (validSearchTerms.includes(query)) {
+    if (query === 'bingo play') {
+      setErrorMessage('');
+      navigate('/bingo');
+    } else if (query === 'how long have we been together?' || query === 'how long have we been together') {
       setErrorMessage('');
       navigate('/timer');
     } else {
@@ -110,7 +113,19 @@ function Question() {
             </div>
           </form>
           <div className="mt-10 px-5 text-white/50">
-            <p>Pro tip: try searching "How long have we been together?" ;)</p>
+            <div className="mt-0 px-5 text-white/50">
+              <h2 className="text-xl mb-1">Pro Tip</h2>
+              <div className="space-y-1">
+                <div className="flex items-center gap-2 py-1 cursor-pointer hover:bg-[#303134] rounded-lg px-1">
+                  <Search className="w-5 h-5 text-[#9aa0a6]" />
+                  <span>Bingo play</span>
+                </div>
+                <div className="flex items-center gap-3 py-2 cursor-pointer hover:bg-[#303134] rounded-lg px-2">
+                  <Search className="w-5 h-5 text-[#9aa0a6]" />
+                  <span>How long have we been together?</span>
+                </div>
+              </div>
+            </div>
             {errorMessage && <div className="mt-4 text-sm font-bold text-red-500">{errorMessage}</div>}
           </div>
         </div>

@@ -34,9 +34,7 @@ function Picture() {
           <button
             className="px-4 py-2 flex justify-center items-center bg-white/20 gap-2 hover:bg-white/30 backdrop-blur-sm text-white text-sm border border-white/50 rounded-lg"
             onClick={() => navigate('/recap')}
-          >
-            <ArrowLeft /> Previous page
-          </button>
+          ></button>
         </div>
       </div>
     </div>

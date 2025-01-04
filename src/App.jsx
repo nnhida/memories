@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Closing, Letter, Passcode, Question, Recap, Timer, Message, Picture, Prettiest, Amazing, Birthday } from './components';
+import { Closing, Letter, Passcode, Question, Recap, Timer, Message, Picture, Prettiest, Amazing, Birthday, Bingo } from './components';
 import './index.css';
 function App() {
   return (
@@ -33,10 +33,10 @@ function App() {
         path="/recap"
         element={<Recap />}
       />
-      {/* <Route
-          path="/recap/message"
-          element={<Message />}
-        /> */}
+      <Route
+        path="/bingo"
+        element={<Bingo />}
+      />
       {/* <Route
           path="/recap/music"
           element={<Music />}
